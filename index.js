@@ -65,7 +65,7 @@ async function query(sqs) {
                 let rcpt = msg.ReceiptHandle;
 
                 if (cmd === 'com.sesamecom.messaging.event.send.queue.email.SendCustomVisitorEmail' &&
-                    memberId === targetMemberId
+                    memberId == targetMemberId
                 ) {
                     console.log(`DELETE:    cmd:${cmd} memberId:${memberId} queueId:${queueId}`);
 
